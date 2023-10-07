@@ -15,11 +15,14 @@ def cambiarLED():
     if ledVerde.is_active:
         ledVerde.off()
         ledAmbar.on()
-    elif ledAmbar.is_Active:
+    elif ledAmbar.is_active:
         ledAmbar.off()
         ledRojo.on()
     elif ledRojo.is_active:
         ledRojo.off()
         ledVerde.on()
 
-boton.when_pressed = cambiarLED
+
+if __name__  == "__main__":
+    while True:
+        boton.when_pressed = cambiarLED
